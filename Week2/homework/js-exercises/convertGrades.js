@@ -3,7 +3,7 @@
 let gradeUsa = '';
 
 let score ='';
-
+//Created this if else function to compare score with different cases to find out USA equivelent of our score.
 function gradeCalculator(score) {
     if (90 <= score && score <= 100) {
     gradeUsa = 'A';
@@ -30,6 +30,6 @@ function gradeCalculator(score) {
 return console.log('You got a '  + gradeUsa + ' (' + score + '%)!');;
   
 }
-
+//enter the score you want to convert.
 gradeCalculator(98);
 
