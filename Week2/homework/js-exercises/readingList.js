@@ -1,5 +1,5 @@
 'use strict'
-let mybooksArray = [{
+const mybooksArray = [{
         title: "Book1",
         author: "Ceylan",
         alreadyRead: true
@@ -16,9 +16,9 @@ let mybooksArray = [{
 ];
 mybooksArray.forEach(book => {
     console.log(book.title + " by " + book.author);
-    if(book.alreadyRead === true){
+    if (book.alreadyRead === true) {
         console.log("You already read " + book.title);
-    }else{
+    } else {
         console.log("You still need to read " + book.title);
     }
 })

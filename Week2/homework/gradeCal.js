@@ -1,7 +1,8 @@
  'use strict'
  const prompt = require('prompt');
  prompt.start();
-
+// I installed npm prompt module to take score from user..
+// I wrote a callback function for converting the score to grade
  function getGrade(score) {
     let grade;
     if (0 <= score && score <= 49) {
@@ -19,9 +20,8 @@
     } 
     return grade;
 }
-
  console.log("Enter your score :");
- let score = prompt.get(['score'], function (err, result) {
-   let myGrade= getGrade(result.score);
+ const score = prompt.get(['score'], function (err, result) {
+   const myGrade= getGrade(result.score); // calling getGrade function with score and assigning it to myGrade
    console.log("You got a " + myGrade + " (" + result.score + "%)");
  });
