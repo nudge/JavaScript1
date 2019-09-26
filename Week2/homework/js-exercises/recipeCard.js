@@ -5,7 +5,7 @@ const myMealRecipe = {
     Ingredients: ["4 eggs", "2 strips of bacon", "1 tsp salt/pepper"]
 }
 for (const propt in myMealRecipe) {
-    if (typeof myMealRecipe[propt] != "object") {
+    if (typeof myMealRecipe[propt] !== "object") {
         console.log(propt + " : " + myMealRecipe[propt])
     } else {
         console.log(propt + " : ");
