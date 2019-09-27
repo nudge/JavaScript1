@@ -5,6 +5,6 @@
 
   console.log(myString.length);
 
-  myString = myString.replace(/,/g, ' ');
+  myString = myString.replace(/,/g, ' ');//I give a space after comma!
   console.log(myString);
 }
