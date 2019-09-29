@@ -4,21 +4,23 @@
     const drinkTypes = ['cola', 'lemonade', 'water'];
     let drinkTray = [];
 
-    for (let i = 0; i < 5; ++i) {
+    for (let i = 0; i < drinkTypes.length; ++i) {
+      let currentDrinkType = drinkTypes[i];
+      let drinkCount = 0;
 
-        if (i < drinkTypes.length) {
-
-          drinkTray.push(drinkTypes[i]);
-        
-        } else {
-
-          drinkTray.push(drinkTypes[i - drinkTypes.length]);
-        
+      do {
+        // check that there are not more than 2 of a drinkType already in drinkTray
+        // if true, then push
+        for (let drink of drinkTray) {
+          if (drink === currentDrinkType) {
+            drinkCount++;
+          };
         }
-        /*
-        right now it shows the result that we want, but it's not the correct way. 
-        we need a smarter logic to check drink types's quantity and change the behavior.
-        */ 
-      }
-      console.log("Hey guys, I brought a " + drinkTray.join(', ') + "!");
+        if (drinkCount < 2) {
+          drinkTray.push(currentDrinkType);
+        }
+      } while (drinkCount < 2 && drinkTray.length < 5);
+    }
+
+console.log("Hey guys, I brought a " + drinkTray.join(', ') + "!");
 }
