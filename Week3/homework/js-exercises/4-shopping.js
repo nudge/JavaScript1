@@ -19,12 +19,3 @@ console.log(groceryItemArray);
 
 addToShoppingCart("Chickpeas");
 console.log(groceryItemArray);
-
-
-
-
-
-
-
-
-

@@ -30,12 +30,12 @@ function cardValidator(creditCardNumber){
 
     } else if(allTheSame(creditCardNumber) === true){
         msg = "All digits cannot be the same!"
-        console.log(msg)
+        console.log(msg);
         return false;
 
     } else{
         msg = "It is a valid credit card number! You see, it is not that difficult. Congratulations:)"        
-        console.log(msg)
+        console.log(msg);
         return true;
     }
 
@@ -52,7 +52,3 @@ console.log(cardValidator("2222222222222221")); // false
 console.log(cardValidator("2222222222222a22")); // false
 console.log(cardValidator("2172227390428222")); // true
 console.log(cardValidator("172649072027493038")); // false
-
-
-
-
