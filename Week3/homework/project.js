@@ -39,11 +39,7 @@ function cardValidator(creditCardNumber){
         return true;
     }
 
-
-
-
 }
-
 
 console.log(cardValidator("2222222222222222")); // false
 console.log(cardValidator("2222222229052222")); // true
