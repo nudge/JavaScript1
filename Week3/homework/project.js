@@ -3,7 +3,7 @@
 
 function cardValidator(creditCardNumber){
     let msg = "";
-    let cardNumStr = creditCardNumber.toString();
+    const cardNumStr = creditCardNumber.toString();
     let sum = 0;
     for(let i = 0; i < cardNumStr.length; i++){
        sum += parseInt(cardNumStr[i]);

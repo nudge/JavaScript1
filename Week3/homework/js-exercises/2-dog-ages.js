@@ -2,7 +2,7 @@
 
 function calculateDogAge(humanYears){
 if (humanYears > 0 ){
-let dogYears = humanYears * 7;
+const dogYears = humanYears * 7;
 return "Your doggie is " +dogYears+ " years old in dog years!"
 }else return "Your dog's age must be a positive value";
 }
