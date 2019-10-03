@@ -2,7 +2,7 @@
 
 //Creating an array of objects
 
-let bookList = [
+const bookList = [
     {
      title: "One Hundred Years of Solitude",
      author: "Gabriel Garcia Marquez",
@@ -24,7 +24,7 @@ let bookList = [
 
 let i = 0;
 
-let bookKeys = Object.keys(bookList[i]);
+const bookKeys = Object.keys(bookList[i]);
 for(i = 0; i < bookList.length; i++){
     console.log(bookList[i]);
 }
