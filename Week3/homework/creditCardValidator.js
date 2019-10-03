@@ -1,5 +1,6 @@
 'use strict';
 {
+    //We create a function which define carnumber is valid or invalid.
     function validateCard (digits) {
         let numbers = digits.split('');
         let lastNumber = numbers[numbers.length - 1];
@@ -20,5 +21,9 @@
 
         return;
     }
-    console.log(validateCard('8888888884888888'));
+    //Now we can check all of codes whether it works or not.
+    console.log(validateCard('888888'));//false
+    console.log(validateCard('8888888884888882'));//true
+    console.log(validateCard('1100111111111111'));//false
+    console.log(validateCard('8888888aaa888888'));//false
 }
