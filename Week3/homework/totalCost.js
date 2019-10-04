@@ -5,7 +5,7 @@
         for (let item in allOfItem) {
             price = price + allOfItem[item];
         }
-        return "The total price of all items " + price
+        return "The total price of all items " + price;
     }
     let cartForParty = {
         beer: 1.75,
