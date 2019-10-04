@@ -41,7 +41,7 @@ console.log("<---->")
 // Two logs showing already read or not
 
 for(i = 0; i < bookList.length; i++){
-    if (bookList[i].alreadyRead] === true){
+    if (bookList[i].alreadyRead === true){
         console.log("You already read " +"\"" + bookList[i].title +"\"" )
     } else {
         console.log("You still need to read " + "\"" + bookList[i].title  + "\"")
