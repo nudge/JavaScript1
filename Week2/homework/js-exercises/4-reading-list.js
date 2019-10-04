@@ -33,7 +33,7 @@ console.log("<---->")
 
 //Title and author
 for(i = 0; i < bookList.length; i++){
-console.log(bookList[i][bookKeys[0]] + " by " + bookList[i][bookKeys[1]]);
+console.log(bookList[i].title + " by " + bookList[i].author);
 }
 
 console.log("<---->")
@@ -41,10 +41,10 @@ console.log("<---->")
 // Two logs showing already read or not
 
 for(i = 0; i < bookList.length; i++){
-    if (bookList[i][bookKeys[2]] === true){
-        console.log("You already read " +"\"" + bookList[i][bookKeys[0]]+"\"" )
+    if (bookList[i].alreadyRead] === true){
+        console.log("You already read " +"\"" + bookList[i].title +"\"" )
     } else {
-        console.log("You still need to read " + "\"" + bookList[i][bookKeys[0]]  + "\"")
+        console.log("You still need to read " + "\"" + bookList[i].title  + "\"")
 
     }
 }
