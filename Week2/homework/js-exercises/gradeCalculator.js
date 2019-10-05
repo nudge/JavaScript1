@@ -2,7 +2,7 @@
 
 {
   // let keyword was used because note will change continuously.
-  function calcGrade(point) { // I use one parameter.
+  function calculateGrade(point) { // I use one parameter.
     let grade;
     if (point >= 90) {
       grade = 'A';
@@ -19,5 +19,5 @@
     }
     console.log(`You got a ${grade} (${point}%)!`);
   }
-  calcGrade(67);
+  calculateGrade(67);
 }
