@@ -1,40 +1,20 @@
 "use strict"
-var books = [
-    {
-        title: "We Should Be All Feminists",
-        author: "Chimamanda Ngozi Adichie",
-        alreadyread: true
-    },
+/*the grocery list should contain bananas and milk at first and then we should be adding other items*/
+let groceryItem = ["bananas", "milk"]
+let i = 0;
+/*the grocery list should have no more than 3 items, so each time I add another item, the first thing in the cart needs to be taken out*/
+function addToShoppingCart (item){
+    let moreitems = groceryItem.push(item) /*here we push the new item into the array*/
+    if (groceryItem.length > 3){
+        groceryItem.shift() /*and here we take the first item out since the length is already = 3*/
 
-    {
-        title: "My Husband's Secret",
-        author: "Liane Moriarty",
-        alreadyread: true
-    },
-
-    {
-        title: "The Second Sex",
-        author: "Simone de Beauvoir",
-        alreadyread: false
     }
-]
+    return `You bought ${groceryItem}!`
+}
 
-var i = 0;
-var bookslen = books.length;
-var bookskey = Object.keys(books[i]);
-console.log(bookslen)
-/*this is to run through the books list*/
-for (i = 0; i < bookslen; i++){
-    console.log(books[i])
-}
-/*this is to show book by book and the status if I already read it or not*/
-for (i = 0; i < bookslen; i++){
-    console.log(books[i][bookskey[0]] + " by " + books[i][bookskey[1]])
-    if (books[i][bookskey[2]] === true)
-    console.log("You already read " + books[i][bookskey[0]])
-         else 
-    console.log("You still need to read " + books[i][bookskey[0]])
-    console.log("-----")
-}
+/*ta daaaaaaa, every new item in the end of the array puts the first item off!!!!*/
+console.log(addToShoppingCart("salt"))
+console.log(addToShoppingCart("coffee"))
+console.log(addToShoppingCart("peanuts"))
 
 

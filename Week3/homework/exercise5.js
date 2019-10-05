@@ -1,18 +1,19 @@
-'use strict'
+"use strict"
 
-let drinkTray = [ ];
-const drinkTypes = ['cola','lemonade','water']
-console.log(drinkTypes) /*just tested if the array is working properly*/
-
-for (let i = 0; drinkTray.length <= 5; i++) {
-    var idx = drinkTypes[Math.floor(Math.random() * drinkTypes.length)]; /*wanted to pick a random piece of the array*/
-    drinkTray.push(drinkTypes[idx]);
-    console.log(drinkTray);
-    break
+function calculateTotalPrice(items) { /* the ideia here is to take all the values from the items and put them all under the var totalPrice */
+    let totalPrice = 0;
+    for (let price in items) {
+        totalPrice += items[price];
+    }
+    return totalPrice; /*how to format the value so it comes just with numbers after coma?*/
 }
 
-console.log("Hey guys, I brought" + drinkTray + "!")
+let CartForParty = { /* with the objetc here, every key is a product and their values are the price */ 
+    beers: 1.99,
+    peanuts: 0.79,
+    chips: 1.25,
+    soda: 2.46,
+    cake: 4.78
+}
 
-/*My expectation about the random var was that it would be really random so each time we run the code 
-it give us back different compositions to the drinkTray array.
-Another point that I still didn't find out is why there is this bunch of comas. */
+console.log(calculateTotalPrice(CartForParty))

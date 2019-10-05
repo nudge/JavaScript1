@@ -1,8 +1,11 @@
-'use strict'
-for (var i = 0; i <= 20; i++) {
-    if (i % 2 === 0)
-    console.log (i + " is an even number" )
-    else
-    console.log (i + " is an odd number")
+"use strict"
+
+let dogage = []
+function calculateDogAge(num){
+    let realdogage = num * 7;
+    return (`Your doggie is ${realdogage} years old in dog years!`)
 }
-    
+
+console.log(calculateDogAge(5))
+console.log(calculateDogAge(3))
+console.log(calculateDogAge(9))
