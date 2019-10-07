@@ -15,7 +15,7 @@ const validateCreditCard = (creditCardNum) => {
         currentNumber = Number.parseInt(currentNumber);
 
         // check that the digit is a number
-        if (!Number.isInteger(currentNumber)) {
+        if (Number.isInteger(Number(creditCardNum))) {
             return false;
         }
     }
@@ -47,8 +47,8 @@ const validateCreditCard = (creditCardNum) => {
 };
 
 /**** tests *****/
-console.log(validateCreditCard('9999777788880000')); //true
-console.log(validateCreditCard('6666666666661666')); //true
-console.log(validateCreditCard('a92332119c011112')); //false
+console.log(validateCreditCard('9999777788880000')); //false
+console.log(validateCreditCard('6666666666661666')); //false
+console.log(validateCreditCard('a92332119c011112')); //true
 console.log(validateCreditCard('4444444444444444')); //false
-console.log(validateCreditCard('1211111111111112')); //true
+console.log(validateCreditCard('1211111111111112')); //false
