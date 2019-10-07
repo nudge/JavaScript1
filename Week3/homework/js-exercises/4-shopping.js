@@ -2,8 +2,9 @@
 const groceryItemArray = ["Milk", "Banana"];
 
 function addToShoppingCart(item){
-   if(groceryItemArray.length > 2)
-      {groceryItemArray.shift();}
+   if(groceryItemArray.length > 2){
+      groceryItemArray.shift();
+   }
    groceryItemArray.push(item);
 }
 
