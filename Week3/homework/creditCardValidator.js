@@ -37,7 +37,7 @@ function creditCardValidator(creditCardNumber) {
     } 
 
 }
-//Valid numbaers
+//Valid numbers
 console.log(creditCardValidator('9999777788880000'));
 console.log(creditCardValidator('6666666666661666'));
 //Invalid numbers
