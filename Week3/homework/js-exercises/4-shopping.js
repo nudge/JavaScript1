@@ -1,9 +1,9 @@
 "use strict";
-let groceryItemArray = ["Milk", "Banana"];
+const groceryItemArray = ["Milk", "Banana"];
 
 function addToShoppingCart(item){
    if(groceryItemArray.length > 2)
-     {groceryItemArray.shift();}
+      {groceryItemArray.shift();}
    groceryItemArray.push(item);
 }
 
