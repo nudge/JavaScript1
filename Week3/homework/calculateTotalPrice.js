@@ -1,6 +1,6 @@
 'use strict';
 const calculateTotalPrice = (object) => {
-    let sum = null;
+    let sum = 0;
 
     for (const k in object) {
         
