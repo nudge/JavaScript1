@@ -1,4 +1,4 @@
-var BookList = [
+const BookList = [
   {
     title: 'Endless night',
     author: 'Agatha christie',
