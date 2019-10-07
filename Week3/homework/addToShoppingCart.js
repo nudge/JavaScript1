@@ -1,7 +1,7 @@
 'use strict';
 function addToShoppingCart(item) {
     // An array with two Items
-    var array = ['bananas', 'milk'];
+    let array = ['bananas', 'milk'];
 
     // Push an item from the prameter
     array.push(item);
