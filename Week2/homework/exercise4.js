@@ -1,5 +1,5 @@
 "use strict"
-var books = [
+let books = [
     {
         title: "We Should Be All Feminists",
         author: "Chimamanda Ngozi Adichie",
@@ -19,9 +19,9 @@ var books = [
     }
 ]
 
-var i = 0;
-var bookslen = books.length;
-var bookskey = Object.keys(books[i]);
+let i = 0;
+let bookslen = books.length;
+let bookskey = Object.keys(books[i]);
 console.log(bookslen)
 /*this is to run through the books list*/
 for (i = 0; i < bookslen; i++){
