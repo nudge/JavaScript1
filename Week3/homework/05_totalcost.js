@@ -21,5 +21,4 @@ let cartForParty = {
   ice: 5,
   music: 60
 };
-
 console.log(calculateTotalPrice(cartForParty));

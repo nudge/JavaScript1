@@ -7,7 +7,7 @@ Return a string: "You bought [LIST_OF_GROCERY_ITEMS]!"
 Create an array with 2 predefined strings: "bananas" and "milk"
 Call the function 3 times, each time with a different string as the argument.*/
 
-let groceryItems = ["bananas", "milk "];
+const groceryItems = ["bananas", "milk "];
 
 function addToShoppingCart(item) {
   groceryItems.push(item);

@@ -23,16 +23,16 @@ function getRandom(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
 
-function tellFortune(numOfchild, name, location, job) {
+function tellFortune(num, name, loc, j) {
   return (
     "You will be a " +
-    getRandom(jobs) +
+    getRandom(j) +
     " in " +
-    getRandom(locations) +
+    getRandom(loc) +
     ", and married to " +
-    getRandom(partnerNames) +
+    getRandom(name) +
     " with " +
-    getRandom(numChildren) +
+    getRandom(num) +
     " kids."
   );
 }
