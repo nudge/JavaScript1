@@ -15,10 +15,13 @@
   // let yourname = '';
 
   function giveCompliment(yourname) {
-    const myArr = ['great', 'awesome', 'corking', 'magnificent', 'brave', 'nice', 'cool', 'fantastic', 'beautiful', 'wonderful'];
+
+    // myArr isn't the best name for this variable. Maybe complimentsList
+    const complimentsList = ['great', 'awesome', 'corking', 'magnificent', 'brave', 'nice', 'cool', 'fantastic', 'beautiful', 'wonderful'];
 
     // Write logic that randomly selects a compliment
-    let compliment = myArr[Math.floor(Math.random() * myArr.length)];
+    // const instead of let for compliment variable 
+    const compliment = complimentsList[Math.floor(Math.random() * complimentsList.length)];
 
     // Return a string: "You are [COMPLIMENT], [YOUR_NAME]!
     return `You are ${compliment}, ${yourname}!`;
