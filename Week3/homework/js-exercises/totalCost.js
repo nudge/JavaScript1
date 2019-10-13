@@ -17,11 +17,9 @@
   // Write a function called calculateTotalPrice
   // It takes 1 argument: an object that contains properties that only contain number values
   function calculateTotalPrice(objectList) {
-    let sum = 0;
-    for (let key in objectList) {
-      sum += objectList[key];
-    }
-    return sum;
+
+
+    return Object.values(objectList).reduce((acc, cur) => acc + cur);
   }
 
   // Call the function 1 time, giving it the object cartForParty as an argument
