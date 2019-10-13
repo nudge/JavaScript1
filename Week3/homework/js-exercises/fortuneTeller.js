@@ -6,16 +6,18 @@
   // Write a function named tellFortune.
   // It takes 4 arguments: number of children (number),
   // partner's name (string), geographic location (string), job title (string).
-  const tellFortune = (numberOfChildren, partnersName, geographicLocation, jobTitle) => {
+  // Parameters change. No re-assigment of parameters!
+  const tellFortune = (childrenArr, partnerArr, locationArr, jobsArr) => {
     // Randomly select values from the arrays.
-    numberOfChildren = numChildren[Math.floor(Math.random() * numChildren.length)];
-    partnersName = partnerNames[Math.floor(Math.random() * partnerNames.length)];
-    geographicLocation = locations[Math.floor(Math.random() * locations.length)];
-    jobTitle = jobs[Math.floor(Math.random() * jobs.length)];
+    // Random options are assigned to a variable with a meaningful name
+    const numChildrenRandom = numChildren[Math.floor(Math.random() * numChildren.length)];
+    const partnerNamesRandom = partnerNames[Math.floor(Math.random() * partnerNames.length)];
+    const locationsRandom = locations[Math.floor(Math.random() * locations.length)];
+    const jobsRandom = jobs[Math.floor(Math.random() * jobs.length)];
 
     // Return a string: "You will be a [JOB_TITLE] in [LOCATION], 
     // and married to [PARTNER_NAME] with [NUMBER_KIDS] kids."
-    return `You will be ${jobTitle} in ${geographicLocation}, and married to ${partnersName} with ${numberOfChildren} kids.`;
+    return `You will be ${jobsRandom} in ${locationsRandom} and married to ${partnerNamesRandom} with ${numChildrenRandom} kids.`;
 
 
   }
@@ -28,5 +30,6 @@
   const jobs = ['teacher', 'programmer', 'doctor', 'architect', 'psychologist'];
 
   // Call the function 1 time, by passing the arrays as the argument.
-  console.log(tellFortune());
+  // The function is called with parameters!
+  console.log(tellFortune(numChildren, partnerNames, locations, jobs));
 }
