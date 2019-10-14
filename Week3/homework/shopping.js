@@ -1,6 +1,6 @@
 'use strict';
 {
-    function addToShoppingCart(add) {
+    function addToShoppingCart(add) {   
         if (listOfItem.length > 2) {
             listOfItem.shift();
         }

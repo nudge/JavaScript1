@@ -1,14 +1,18 @@
 'use strict';
 {
-    function tellFortune(){
-        
-        return "You will be a " + jobs[Math.floor(Math.random() * jobs.length)] + " in " + locations[Math.floor(Math.random() * locations.length)] + ", and married to " + partnerNames[Math.floor(Math.random() * partnerNames.length)] + " with " + numChildren[Math.floor(Math.random() * numChildren.length)] + " kids."
-    }
+    
+    function getRandom(array){
+        return Math.floor(Math.random() * array.length);
+    };
+
+    function tellFortune(numChildren, partnerNames, locations, jobs){
+        return `You will be a ${jobs[getRandom(jobs)]} in ${locations[getRandom(locations)]}, and married to ${partnerNames[getRandom(partnerNames)]} with ${numChildren[getRandom(numChildren)]} kids.`
+    };
 
     let partnerNames = ["Ayse", "Fatma", "Hayriye", "Kezban", "Hatice"];
     let numChildren = [1, 2, 3, 4, 5];
     let locations = ["Amsterdam", "Rotterdam", "Alkmar", "Hengelo", "Tilburg"];
     let jobs = ["programmer", "doctor", "teacher", "lawyer", "officer"];
 
-    console.log(tellFortune());
+    console.log(tellFortune(numChildren, partnerNames, locations, jobs));
 }
