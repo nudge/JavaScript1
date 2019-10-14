@@ -18,8 +18,10 @@
   // It takes 1 argument: an object that contains properties that only contain number values
   function calculateTotalPrice(objectList) {
 
-
-    return Object.values(objectList).reduce((acc, cur) => acc + cur);
+    // Get object values with special method
+    const getObjValues = Object.values(objectList)
+    // Sum each values with reduce method
+    return getObjValues.reduce((acc, cur) => acc + cur);
   }
 
   // Call the function 1 time, giving it the object cartForParty as an argument
