@@ -13,44 +13,31 @@
     }
 
     // All of them must be numbers
-    for (let item = 0; item < cardNumber.length; ++item) {
-      let cardNumberItem = cardNumber[item];
-      cardNumberItem = Number.parseInt(cardNumberItem);
-
-      if (Number.isInteger(cardNumberItem) !== true) {
-        console.log(`Must be numbers all of them!`)
-        return false;
-      }
+    // Check whether the number with Number()
+    if (!Number(cardNumber)) {
+      console.log(`Must be numbers all of them!`)
+      return false;
     }
 
     // You must have at least two different digits represented
     // (all of the digits cannot be the same)
-    const object = {};
-    let index = 0;
-    while (index < cardNumber.length) {
-      object[cardNumber[index]] = true;
-      ++index;
-    }
-    if (Object.keys(object).length < 2) {
-      console.log(`It must have at least two diffrent digits!`)
+    // Convert to array from number
+    const cardNumberArr = Array.from(String(cardNumber), Number);
+    // If all the digits are same, its length must be 1 
+    if ([... new Set(cardNumberArr)].length === 1) {
+      console.log(`It must have at least two different digits!`)
       return false;
     }
 
-
-
     // The final digit must be even
-    if (cardNumber[cardNumber.length - 1] % 2 !== 0) {
+    // Divide the whoe card number by 2
+    if (cardNumber % 2 !== 0) {
       console.log(`Odd final number!`);
       return false;
     }
 
-    // The sum of all the digits must be greater than 16
-    let sum = 0;
-    let i = 0;
-    while (i < cardNumber.length) {
-      sum += parseInt(cardNumber[i]);
-      ++i;
-    }
+    // Sum each elemans of the array with reduce method
+    const sum = cardNumberArr.reduce((acc, cur) => acc + cur);
     if (sum <= 16) {
       console.log(`Sum less than 16!`);
       return false;
@@ -61,7 +48,8 @@
     return true;
   }
 
-  console.log(checkCard('a92332119c011112'));
+  console.log(checkCard('645666379266664'));
+  console.log(checkCard('92356419601511q6'));
   console.log(checkCard('4444444444444444'));
   console.log(checkCard('1111111111111110'));
   console.log(checkCard('6666666666666661'));
