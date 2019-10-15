@@ -1,12 +1,12 @@
 "use strict"
 
-let numChildren = [0,1,2,3,4]
-let partnerNames = ['Brad Pitt','Channing Tatum','Bradley Cooper','Hugh Jackman','Ryan Gosling'];
-let locations = ['Italy','Brazil','Japan','Canada','Argentina'];
-let jobs = ['Web Developer','Chef de Cuisine','Circus Clown','Lawyer','Designer'];
+const numChildren = [0,1,2,3,4]
+const partnerNames = ['Brad Pitt','Channing Tatum','Bradley Cooper','Hugh Jackman','Ryan Gosling'];
+const locations = ['Italy','Brazil','Japan','Canada','Argentina'];
+const jobs = ['Web Developer','Chef de Cuisine','Circus Clown','Lawyer','Designer'];
 
 function getElement(elementArray) {
-    let randomthing = Math.floor(Math.random() * elementArray.length);
+    const randomthing = Math.floor(Math.random() * elementArray.length);
     return elementArray[randomthing];
 }
 
