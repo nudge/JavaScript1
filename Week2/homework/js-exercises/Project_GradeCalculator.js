@@ -4,7 +4,7 @@
 function gradeCalculator(grade) {
     if (grade>100) {
         console.log('Are you kidding? You cannot have a grade of' + ' (' + grade + '%' + ')');
-    } else if (100>=grade>=90) {
+    } else if (100>=grade && grade>=90) {
         console.log('You got an A' + ' (' + grade + '%' + ')');
     } else if (grade>=80) {
         console.log('You got a B' + ' (' + grade + '%' + ')');
@@ -21,5 +21,5 @@ function gradeCalculator(grade) {
     return grade;
 }
 
-console.log(gradeCalculator()); 
+console.log(gradeCalculator(95)); 
 // When you enter the grade of the student in the empty paranthesis, it finds the interval of the grade belongs to and logs it to the console.
