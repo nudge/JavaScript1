@@ -3,12 +3,11 @@
     
 function addToShoppingCart(groceryItem) {
     
-    if (cart.length > 2) {
-        cart.push(groceryItem);
+    cart.push(groceryItem);
+
+    if (cart.length > 3) {
         cart.shift();
-    } else {
-        cart.push(groceryItem);
-    }
+    };
 
     return 'You bought ' + cart + '!'
 }

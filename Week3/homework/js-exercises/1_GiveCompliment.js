@@ -1,13 +1,14 @@
 'use strict'
 function giveCompliment(yourName) {
-    let complimentWords = ['great', 'wonderful', 'amazing', 'majestic', 'lovely', 'kind', 'stunning', 'awesome', 'elegant', 'superb'];
-    let randomCompliment = complimentWords[Math.floor((Math.random()*complimentWords.length))];
-    return 'You are ' + randomCompliment + ' ' + yourName + '!';
+    const complimentWords = ['great', 'wonderful', 'amazing', 'majestic', 'lovely', 'kind', 'stunning', 'awesome', 'elegant', 'superb'];
+    const randomCompliment = complimentWords[Math.floor((Math.random()*complimentWords.length))];
+    // return 'You are ' + randomCompliment + ' ' + yourName + '!';
+    return `You are ${randomCompliment} ${name}!`
 
 }
 
-let name = 'Sebastian';
-let result = giveCompliment(name);
+const name = 'George';
+const result = giveCompliment(name);
 console.log(result);
 
 

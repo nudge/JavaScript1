@@ -1,10 +1,10 @@
 'use strict'
 function calculateTotalPrice(number) {
-    return Object.values(cartForParty).reduce((drinks, chips) => drinks + chips);
+    return Object.values(cartForParty).reduce((total, items) => total + items);
     
 }
 
-let cartForParty = {
+const cartForParty = {
     drinks: 100, 
     chips: 50,
     cups: 15,
